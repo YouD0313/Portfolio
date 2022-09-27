@@ -1,0 +1,184 @@
+/* 산돌 삼립호빵체 */
+@font-face {
+	font-family: 'SDSamliphopangche_Outline';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+/* 리디바탕체 */
+@font-face {
+	font-family: 'RIDIBatang';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Global */
+:root {
+	/* Color */
+	--color-white: #fff;
+	--color-light-white: #eee;
+	--color-dark-white: #bdbdbd;
+	--color-orange: #ffa204;
+	--color-light-orange: #ffd99f;
+	--color-navy-blue: #002660;
+	--color-blue: #005dfb;
+	--color-dark-grey: #4d4d4d;
+	--color-grey: #616161;
+	--color-light-grey: #7c7979;
+	--color-black: #000;
+
+	/* Font size */
+	--font-large: 48px;
+	--font-medium: 28px;
+	--font-regular: 18px;
+	--font-small: 16px;
+	--font-micro: 14px;
+
+	/* Font weight */
+	--weight-bold: 700;
+	--weight-semi-bold: 600;
+	--weight-regular: 400;
+
+	/* Size */
+	--size-border-radius: 5px;
+	--profile-size: 35vh;
+	--profile-space-size: 100px;
+}
+
+/* Universal tags */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	/* width: 1536px; */
+	margin: 0;
+	cursor: default;
+	font-family: 'RIDIBatang';
+}
+
+a {
+	text-decoration: none;
+	color: colo var(--color-white);
+}
+
+ul {
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+}
+
+button {
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+/* Typography */
+h1 {
+	font-size: var(--font-large);
+	font-weight: var(--weight-bold);
+	color: var(--color-black);
+	margin: 16px 0;
+}
+
+h2 {
+	font-size: var(--font-regular);
+	font-weight: var(--weight-semi-bold);
+	color: var(--color-black);
+}
+
+h3 {
+	font-size: var(--font-regular);
+	font-weight: var(--weight-regular);
+	color: var(--color-black);
+	margin: 8px 0;
+}
+
+p {
+	font-size: var(--font-regular);
+	font-weight: var(--weight-regular);
+	color: var(--color-black);
+	margin: 4px 0;
+}
+
+/* Navbar */
+#navbar {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--color-light-orange);
+	align-items: center;
+	color: var(--color-orange);
+	font-family: 'SDSamliphopangche_Outline';
+	font-size: var(--font-medium);
+}
+
+div a img {
+	vertical-align: middle;
+}
+
+.navbar__menu {
+	display: flex;
+	justify-content: end;
+}
+
+.navbar__menu__item {
+	padding: 8px 12px;
+	margin: 0 4px;
+	cursor: pointer;
+	border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+	border: 1px solid var(--color-orange);
+}
+
+.navbar__menu__item:hover {
+	background-color: var(--color-orange);
+	color: var(--color-light-orange);
+}
+
+/* Home */
+#home {
+	background: no-repeat url('/img/yujibackground.png');
+	background-size: cover;
+	padding: var(--profile-space-size);
+	text-align: center;
+}
+
+.home__avatar {
+	background: url(/img/yujiprofile.jpg) no-repeat;
+	background-size: cover;
+	width: var(--profile-size);
+	height: var(--profile-size);
+	border-radius: 50%;
+	margin: 0 auto;
+	border: 3px solid var(--color-white);
+}
+
+.home__title,
+.home__description,
+.home__contact {
+	color: var(--color-navy-blue);
+}
+
+.home__contact {
+	font-size: var(--font-regular);
+	font-weight: var(--weight-bold);
+	color: var(--color-white);
+	border: 2px solid var(--color-white);
+	border-radius: var(--size-border-radius);
+	margin: 24px;
+	padding: 8px 12px;
+}
+
+/* Section common */
+.section {
+	padding: 50px;
+	text-align: center;
+}

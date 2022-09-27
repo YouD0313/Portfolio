@@ -1,0 +1,71 @@
+/* 산돌 삼립호빵체 */
+@font-face {
+	font-family: 'SDSamliphopangche_Outline';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+/* 리디바탕체 */
+@font-face {
+	font-family: 'RIDIBatang';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+:root {
+	--logo-size: 94px;
+	--profil-size: 35vh;
+}
+header {
+	background-image: url('/img/yujibackground.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 650px;
+	margin: 0 auto;
+}
+.navHead,
+.navManu {
+	display: inline;
+}
+.headRight {
+	text-align: end;
+}
+#Dlogo {
+	width: var(--logo-size);
+	height: var(--logo-size);
+}
+nav div span {
+	margin-left: -2.8vh;
+	margin-right: 18vh;
+}
+nav div a {
+	margin-right: 2vh;
+	text-decoration: none;
+}
+nav div a,
+nav div span {
+	vertical-align: middle;
+	font-family: 'SDSamliphopangche_Outline';
+	font-size: 4vh;
+	color: rgb(255, 157, 45);
+}
+.profil {
+	background: url('img/yujiprofile.jpg') no-repeat;
+	background-size: cover;
+	width: var(--profil-size);
+	height: var(--profil-size);
+	border-radius: 50%;
+	margin: 30px auto;
+	border: 3px solid #fff;
+}
+.introH1 {
+	font-family: 'RIDIBatang';
+	line-height: 2.5rem;
+	text-align: center;
+	letter-spacing: 4px;
+	color: rgb(164, 53, 208);
+}
