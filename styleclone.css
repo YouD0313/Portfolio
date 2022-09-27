@@ -145,14 +145,14 @@ div a img {
 
 /* Home */
 #home {
-	background: no-repeat url('/img/yujibackground.png');
+	background: no-repeat url('img/yujibackground.png');
 	background-size: cover;
 	padding: var(--profile-space-size);
 	text-align: center;
 }
 
 .home__avatar {
-	background: url(/img/yujiprofile.jpg) no-repeat;
+	background: url('img/yujiprofile.jpg') no-repeat;
 	background-size: cover;
 	width: var(--profile-size);
 	height: var(--profile-size);
