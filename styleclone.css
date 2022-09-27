@@ -23,7 +23,7 @@
 	--color-orange: #ffa204;
 	--color-light-orange: #ffd99f;
 	--color-navy-blue: #002660;
-	--color-blue: #005dfb;
+	--color-blue: #73aace;
 	--color-dark-grey: #4d4d4d;
 	--color-grey: #616161;
 	--color-light-grey: #7c7979;
@@ -181,4 +181,46 @@ div a img {
 .section {
 	padding: 50px;
 	text-align: center;
+	max-width: 1200px;
+	margin: auto;
+}
+
+/* About */
+.about__majors {
+	display: flex;
+	justify-content: space-between;
+	margin: 80px 0;
+}
+.major__icon {
+	width: 170px;
+	height: 170px;
+	line-height: 170px;
+	font-size: 70px;
+	border: 1px solid var(--color-blue);
+	color: var(--color-blue);
+	border-radius: 50%;
+	margin-bottom: 16px;
+}
+
+.major__icon:hover {
+	border: 1px solid var(--color-light-orange);
+	transition: 600ms;
+}
+.major__icon:hover i {
+	color: var(--color-light-orange);
+	transform: scale(1.1) rotate(15deg);
+	transition: 600ms;
+}
+.major__icon:not(:hover) i,
+.major__icon:not(:hover) {
+	transition: 600ms;
+}
+
+.major__title,
+.major__description {
+	color: var(--color-dark-grey);
+}
+
+.major__description {
+	font-size: var(--font-small);
 }
