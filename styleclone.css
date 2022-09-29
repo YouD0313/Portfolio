@@ -534,6 +534,14 @@ div a img {
 	border-radius: var(--size-border-radius);
 }
 
+.testimonial__speech-bubble-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
 .testimonial__reverse {
 	flex-direction: row-reverse;
 }
