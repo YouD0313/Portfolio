@@ -148,7 +148,7 @@ div a img {
 
 .navbar__toggle-btn {
 	position: absolute;
-	top: 28px;
+	top: 27px;
 	right: 32px;
 	font-size: 30px;
 	color: var(--color-orange);
@@ -162,14 +162,16 @@ div a img {
 	padding: var(--profile-space-size);
 	text-align: center;
 }
-
+.home__avatar-warp {
+	display: flex;
+	justify-content: center;
+}
 .home__avatar {
 	background: url('img/yujiprofile.jpg') no-repeat;
 	background-size: cover;
 	width: var(--profile-size);
 	height: var(--profile-size);
 	border-radius: 50%;
-	margin: auto;
 	border: 3px solid var(--color-white);
 }
 
@@ -616,6 +618,13 @@ div a img {
 	/* work */
 	.project {
 		flex-grow: 1;
+	}
+	.work__categories {
+		display: flex;
+		justify-content: center;
+	}
+	.category__btn {
+		padding: 10px;
 	}
 
 	/* certificat */
