@@ -112,13 +112,22 @@ p {
 
 /* Navbar */
 #navbar {
+	position: fixed;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	background-color: var(--color-light-orange);
+	background-color: transparent;
 	align-items: center;
 	color: var(--color-orange);
 	font-family: 'SDSamliphopangche_Outline';
 	font-size: var(--font-medium);
+	transition: all var(--animation-duration) ease-in-out;
+	z-index: 1;
+}
+
+#navbar.navbar--change {
+	background-color: var(--color-light-orange);
+	padding: 8px;
 }
 
 div a img {
@@ -160,6 +169,7 @@ div a img {
 	background: no-repeat url('img/yujibackground.png');
 	background-size: cover;
 	padding: var(--profile-space-size);
+	padding-top: 100px;
 	text-align: center;
 }
 .home__avatar-warp {
