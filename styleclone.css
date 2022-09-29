@@ -444,7 +444,7 @@ div a img {
 .certificates {
 	display: flex;
 	justify-content: center;
-	padding: 40px;
+	margin-top: 40px;
 }
 
 .certificate,
@@ -608,6 +608,11 @@ div a img {
 		display: none;
 	}
 
+	/* home */
+	#home {
+		padding: 50px;
+	}
+
 	/* about */
 	.major {
 		margin-bottom: 38px;
@@ -645,6 +650,10 @@ div a img {
 	}
 
 	/* testimonial */
+	.testimonials {
+		margin: 40px 0;
+	}
+
 	.testimonial__avatar {
 		width: 80px;
 		height: 80px;
