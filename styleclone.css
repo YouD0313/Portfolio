@@ -172,10 +172,12 @@ div a img {
 	padding-top: 100px;
 	text-align: center;
 }
+
 .home__avatar-warp {
 	display: flex;
 	justify-content: center;
 }
+
 .home__avatar {
 	background: url('img/yujiprofile.jpg') no-repeat;
 	background-size: cover;
