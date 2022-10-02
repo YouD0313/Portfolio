@@ -38,9 +38,28 @@ const homeWrap = document.querySelector('#home__wrap');
 const homeHeight = homeWrap.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
 	console.log(`homeHeight: ${homeHeight}`);
-	console.log(1 - window.scrollY / homeHeight);
+	// console.log(1 - window.scrollY / homeHeight);
 	let opacity = 1 - window.scrollY / homeHeight;
 	homeWrap.style.opacity = opacity;
+});
+
+// let innerHeight = window.innerHeight;
+const topBtn = document.querySelector('.top__btn');
+document.addEventListener('scroll', (data) => {
+	data = false;
+	if (window.scrollY > homeHeight) {
+		topBtn.style.visibility = 'visible';
+		data = true;
+	} else {
+		topBtn.style.visibility = 'hidden';
+		data = false;
+	}
+});
+
+document.addEventListener('click', (data) => {
+	if (data) {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 });
 
 function scrollIntoView(selector) {
