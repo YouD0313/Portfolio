@@ -43,20 +43,21 @@ document.addEventListener('scroll', () => {
 	homeWrap.style.opacity = opacity;
 });
 
-// let innerHeight = window.innerHeight;
+// Show "arrow up" button when scrolling down
 const topBtn = document.querySelector('.top__btn');
 document.addEventListener('scroll', (data) => {
 	data = false;
-	if (window.scrollY > homeHeight) {
-		topBtn.style.visibility = 'visible';
+	if (window.scrollY > homeHeight / 2) {
+		topBtn.classList.add('visible');
 		data = true;
 	} else {
-		topBtn.style.visibility = 'hidden';
+		topBtn.classList.remove('visible');
 		data = false;
 	}
 });
 
-document.addEventListener('click', (data) => {
+// Handle click on the "arrow up" button
+topBtn.addEventListener('click', (data) => {
 	if (data) {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}

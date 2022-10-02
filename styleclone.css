@@ -215,8 +215,15 @@ div a img {
 	background-color: var(--color-orange);
 	border-radius: 50%;
 	border: 0.1px solid var(--color-white);
-	visibility: hidden;
+	transition: opacity var(--animation-duration) ease-in;
+	opacity: 0;
+	pointer-events: none;
 	z-index: 1;
+}
+
+.top__btn.visible {
+	opacity: 1;
+	pointer-events: all;
 }
 
 /* Section common */
