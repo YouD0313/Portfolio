@@ -14,6 +14,7 @@ document.addEventListener('scroll', () => {
 
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
+const navbarLi = document.querySelectorAll('li');
 navbarMenu.addEventListener('click', (event) => {
 	// console.log(event.target.dataset.link);
 	const target = event.target;
@@ -37,7 +38,7 @@ btnHomeContact.addEventListener('click', () => {
 const homeWrap = document.querySelector('#home__wrap');
 const homeHeight = homeWrap.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-	console.log(`homeHeight: ${homeHeight}`);
+	// console.log(`homeHeight: ${homeHeight}`);
 	// console.log(1 - window.scrollY / homeHeight);
 	let opacity = 1 - window.scrollY / homeHeight;
 	homeWrap.style.opacity = opacity;
@@ -45,25 +46,43 @@ document.addEventListener('scroll', () => {
 
 // Show "arrow up" button when scrolling down
 const topBtn = document.querySelector('.top__btn');
-document.addEventListener('scroll', (data) => {
-	data = false;
+document.addEventListener('scroll', () => {
 	if (window.scrollY > homeHeight / 2) {
 		topBtn.classList.add('visible');
-		data = true;
 	} else {
 		topBtn.classList.remove('visible');
-		data = false;
 	}
 });
 
 // Handle click on the "arrow up" button
-topBtn.addEventListener('click', (data) => {
-	if (data) {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	}
+topBtn.addEventListener('click', () => {
+	scrollIntoView('#home');
 });
 
 function scrollIntoView(selector) {
 	const scrollTo = document.querySelector(selector);
 	scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
+
+//
+const workBtns = document.querySelector('.work__categories');
+const workProjectsContainer = document.querySelector('.work__projects');
+const workProjects = document.querySelectorAll('.project'); //array
+workBtns.addEventListener('click', (e) => {
+	const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+	console.log(filter);
+	if (filter == null) {
+		return;
+	}
+	workProjectsContainer.classList.add('anim-out');
+	setTimeout(() => {
+		workProjects.forEach((item) => {
+			if (filter === '*' || filter === item.dataset.type) {
+				item.classList.remove('invisible');
+			} else {
+				item.classList.add('invisible');
+			}
+		});
+		workProjectsContainer.classList.remove('anim-out');
+	}, 300);
+});
