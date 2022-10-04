@@ -86,3 +86,24 @@ workBtns.addEventListener('click', (e) => {
 		workProjectsContainer.classList.remove('anim-out');
 	}, 300);
 });
+
+// Active state
+const navbarMenuItem = document.querySelectorAll('.navbar__menu__item')
+navbarMenuItem.forEach((tab, idx)=> {
+    tab.addEventListener('click', function(){
+        navbarMenuItem.forEach((item)=> {
+            item.classList.remove('active')
+        })
+        navbarMenuItem[idx].classList.add('active')
+    })
+})
+
+const workCategoryBtn = document.querySelectorAll('.category__btn')
+workCategoryBtn.forEach((tab, idx)=> {
+    tab.addEventListener('click', function(){
+        workCategoryBtn.forEach((inner)=> {
+            inner.classList.remove('active')
+        })
+        workCategoryBtn[idx].classList.add('active')
+    })
+})
