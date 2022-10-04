@@ -674,12 +674,7 @@ div a img {
 		padding: 50px;
 		padding-top: 100px;
 	}
-
-	.home__avatar {
-		width:25vh;
-		height:  25vh;
-	}
-
+	
 	/* top button */
 	.top__btn {
 		bottom: 30px;
