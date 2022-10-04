@@ -25,6 +25,9 @@ navbarMenu.addEventListener('click', (event) => {
 	} else {
 		scrollIntoView(link);
 	}
+	setTimeout(() => {
+		navbarMenu.classList.remove('open');
+	}, 700)
 });
 
 // Handle click on "contact me" button on home
@@ -64,13 +67,13 @@ function scrollIntoView(selector) {
 	scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
 
-//
+// Work project items filltering
 const workBtns = document.querySelector('.work__categories');
 const workProjectsContainer = document.querySelector('.work__projects');
 const workProjects = document.querySelectorAll('.project'); //array
 workBtns.addEventListener('click', (e) => {
 	const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-	console.log(filter);
+	// console.log(filter);
 	if (filter == null) {
 		return;
 	}
@@ -106,4 +109,12 @@ workCategoryBtn.forEach((tab, idx)=> {
         })
         workCategoryBtn[idx].classList.add('active')
     })
+})
+
+// Navbar toggle button for small screen
+
+
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+	navbarMenu.classList.toggle('open');
 })
