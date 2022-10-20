@@ -686,8 +686,7 @@ div a img {
 }
 @media screen and (max-width: 768px) {
 	.section {
-		padding-left: 30px;
-		padding-right: 30px;
+		padding: 73px 30px 30px 30px;
 	}
 	/* navbar */
 	.navbar__menu__item {
@@ -736,14 +735,16 @@ div a img {
 		flex-grow: 1;
 	}
 	.work__categories {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		justify-content: center;
 	}
 	.category__btn {
-		padding: 10px 40px;
+		margin: 4px 0;
+		width: 100%;
 	}
 	.category__count {
-		right: 9px;
+		right: 10px;
 	}
 
 	/* certificat */
